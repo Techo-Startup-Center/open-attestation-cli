@@ -1,6 +1,6 @@
 import { providers } from "ethers";
 
-export type networkCurrency = "ETH" | "MATIC";
+export type networkCurrency = "ETH" | "MATIC" | "CADL";
 
 type SupportedNetwork = {
   explorer: string;
@@ -17,6 +17,9 @@ export enum NetworkCmdName {
   Sepolia = "sepolia",
   Matic = "matic",
   Maticmum = "maticmum",
+  CamDL = "camdl",
+  CamDLTestNet = "camdl-testnet",
+  CamDLStaging = "camdl-staging",
 }
 
 const defaultInfuraProvider =
@@ -73,6 +76,27 @@ export const supportedNetwork: {
     networkId: 80001,
     networkName: "maticmum",
     currency: "MATIC",
+  },
+  [NetworkCmdName.CamDL]: {
+    explorer: "https://explorer.camdl.gov.kh",
+    provider: jsonRpcProvider("https://rpc1.camdl.gov.kh"),
+    networkId: 95,
+    networkName: "CamDL Mainnet",
+    currency: "CADL",
+  },
+  [NetworkCmdName.CamDLTestNet]: {
+    explorer: "https://explorer.testnet.camdl.gov.kh",
+    provider: jsonRpcProvider("https://rpc1.testnet.camdl.gov.kh"),
+    networkId: 195,
+    networkName: "CamDL Testnet",
+    currency: "CADL",
+  },
+  [NetworkCmdName.CamDLStaging]: {
+    explorer: "https://explorer.staging.camdl.gov.kh",
+    provider: jsonRpcProvider("https://rpc1.staging.camdl.gov.kh"),
+    networkId: 295,
+    networkName: "CamDL Staging",
+    currency: "CADL",
   },
 };
 

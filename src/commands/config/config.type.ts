@@ -13,4 +13,7 @@ export enum TestNetwork {
   Goerli = "goerli (deprecated)",
   Sepolia = "sepolia",
   Mumbai = "mumbai (polygon)",
+  CamDL = "camdl",
+  CamDLTestnet = "camdl (testnet)",
+  CamDLStaging = "camdl (staging)"
 }
