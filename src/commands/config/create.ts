@@ -60,7 +60,7 @@ export const handler = async (args: CreateConfigCommand): Promise<void> => {
       args.configTemplatePath = configTemplatePath;
     }
 
-    const networks = [TestNetwork.Local, TestNetwork.Sepolia, TestNetwork.Mumbai, TestNetwork.Apothem];
+    const networks = [TestNetwork.Local, TestNetwork.Sepolia, TestNetwork.Mumbai, TestNetwork.Apothem, TestNetwork.CamDL, TestNetwork.CamDLTestnet];
     const { network } = await inquirer.prompt({
       type: "list",
       name: "network",
@@ -84,6 +84,8 @@ const convertNetworkToNetworkCmdName = (selectedNetwork: TestNetwork): NetworkCm
     [TestNetwork.Sepolia]: NetworkCmdName.Sepolia,
     [TestNetwork.Mumbai]: NetworkCmdName.Maticmum,
     [TestNetwork.Apothem]: NetworkCmdName.XDCApothem,
+    [TestNetwork.CamDL]: NetworkCmdName.CamDL,
+    [TestNetwork.CamDLTestnet]: NetworkCmdName.CamDLTestNet
   };
   return network[selectedNetwork];
 };

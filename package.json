@@ -1,12 +1,12 @@
 {
-  "name": "@govtechsg/open-attestation-cli",
-  "version": "0.0.0-development",
+  "name": "open-attestation-cli-camdl",
+  "version": "1.0.0",
   "description": "",
   "main": "index.ts",
   "types": "dist/types/index.d.ts",
   "bin": {
-    "open-attestation": "dist/cjs/index.js",
-    "oa": "dist/cjs/index.js"
+    "open-attestation-camdl": "dist/cjs/index.js",
+    "oa-camdl": "dist/cjs/index.js"
   },
   "scripts": {
     "dev": "ts-node src/index.ts",
