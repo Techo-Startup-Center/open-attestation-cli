@@ -42,6 +42,8 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 | mumbai             | 80001    | Test       |
 | xdc                | 50       | Production |
 | xdcapothem         | 51       | Test       |
+| camdl              | 95       | Production |
+| camdl-testnet      | 395      | Test       |
 
 ---
 

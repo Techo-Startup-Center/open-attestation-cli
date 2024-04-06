@@ -84,6 +84,7 @@ const convertNetworkToNetworkCmdName = (selectedNetwork: TestNetwork): NetworkCm
     [TestNetwork.Sepolia]: NetworkCmdName.Sepolia,
     [TestNetwork.Mumbai]: NetworkCmdName.Maticmum,
     [TestNetwork.Apothem]: NetworkCmdName.XDCApothem,
+    [TestNetwork.CamdlTestnet]: NetworkCmdName.Camdl,
   };
   return network[selectedNetwork];
 };
